@@ -1,1 +1,0 @@
-# hack21-android
