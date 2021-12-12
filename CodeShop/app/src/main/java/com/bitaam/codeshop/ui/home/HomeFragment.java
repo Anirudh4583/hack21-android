@@ -71,6 +71,18 @@ public class HomeFragment extends Fragment {
         codeTitles.add("React dashboard UI with side bar navigation panel and search panel.");
         codeTitles.add("This code provides you very pleasant sign in ui and saves your time.");
 
+        ArrayList<String> codeType = new ArrayList<>();
+        codeType.add("Tradable");
+        codeType.add("Open Source");
+        codeType.add("Tradable");
+        codeType.add("Tradable");
+        codeType.add("Open Source");
+        codeType.add("Tradable");
+        codeType.add("Open Source");
+        codeType.add("Tradable");
+        codeType.add("Tradable");
+        codeType.add("Open Source");
+
         String code = "import React, { Component } from \"react\";\n" +
                 "\n" +
                 "export default class Login extends Component {\n" +
@@ -113,6 +125,7 @@ public class HomeFragment extends Fragment {
             codeItemModal.setAuthor("Mangalam Pandey");
             codeItemModal.setDate("12 ,Dec 2021 12:00");
             codeItemModal.setCode(code);
+            codeItemModal.setType(codeType.get(i));
 
             ((HomeCodeAdapter) Objects.requireNonNull(codeHomeRecyclerView.getAdapter())).update(codeItemModal, "author");
 

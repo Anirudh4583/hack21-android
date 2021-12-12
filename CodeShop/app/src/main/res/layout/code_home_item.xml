@@ -46,20 +46,25 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/codeItemtitle"
             android:layout_alignParentStart="true"
-            android:layout_margin="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="7dp"
             android:layout_toLeftOf="@id/codeAuthorTv"
             android:singleLine="true"
-            android:text="12 ,Dec 2021 12:00"
-            android:textSize="12sp" />
+            android:text="Tradable"
+            android:textColor="@color/purple_700"
+            android:textSize="14sp" />
 
         <TextView
             android:layout_alignParentEnd="true"
             android:layout_below="@id/codeItemtitle"
             android:layout_margin="7dp"
             android:id="@+id/codeAuthorTv"
-            android:textSize="12sp"
+            android:textSize="14sp"
             android:text="Mangalam Pandey"
             android:singleLine="true"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 

@@ -20,7 +20,7 @@ import com.squareup.picasso.Picasso;
 public class CodeBlogActivity extends AppCompatActivity {
 
     ImageView codeTemplateIv;
-    TextView templateTitle,templateAuthorTv,dateTv,codeTv,copyCodeTv;
+    TextView templateTitle,templateAuthorTv,dateTv,codeTv,copyCodeTv,codeTypeTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +36,15 @@ public class CodeBlogActivity extends AppCompatActivity {
         dateTv = findViewById(R.id.templateCreationDateTv);
         codeTv = findViewById(R.id.codeTv);
         copyCodeTv = findViewById(R.id.copyCodeTv);
+        codeTypeTv = findViewById(R.id.templateCodeTypeTv);
 
         if (codeItemModal != null){
             Picasso.get().load(Uri.parse(codeItemModal.getImgUrl())).into(codeTemplateIv);
             templateTitle.setText(codeItemModal.getTitleText());
-            templateAuthorTv.setText("Author : "+codeItemModal.getAuthor());
+            templateAuthorTv.setText("Token Owner : "+codeItemModal.getAuthor());
             dateTv.setText("Posted :"+codeItemModal.getDate());
             codeTv.setText(codeItemModal.getCode());
+            codeTypeTv.setText(codeItemModal.getType());
         }
 
         copyCodeTv.setOnClickListener(new View.OnClickListener() {

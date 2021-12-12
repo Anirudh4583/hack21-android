@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class CodeItemModal implements Serializable {
 
-    String imgUrl,titleText,author,date,code;
+    String imgUrl,titleText,author,date,code,type,publicAddress;
 
     public CodeItemModal() {
     }
@@ -47,5 +47,21 @@ public class CodeItemModal implements Serializable {
 
     public void setCode(String code) {
         this.code = code;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getPublicAddress() {
+        return publicAddress;
+    }
+
+    public void setPublicAddress(String publicAddress) {
+        this.publicAddress = publicAddress;
     }
 }

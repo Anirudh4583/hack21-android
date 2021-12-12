@@ -51,10 +51,10 @@ public class HomeCodeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
         ViewHolder viewHolder = (ViewHolder)holder;
         viewHolder.titleTv.setText(codeItemModals.get(position).getTitleText());
-        String writer = "Author : "+codeItemModals.get(position).getAuthor();
+        String writer = "Token owner : "+codeItemModals.get(position).getAuthor();
         viewHolder.authorTv.setText(writer);
         String dateTime = "Posted :"+codeItemModals.get(position).getDate();
-        viewHolder.dateTv.setText(dateTime);
+        viewHolder.dateTv.setText(codeItemModals.get(position).getType());
 
         Picasso.get().load(Uri.parse(codeItemModals.get(position).getImgUrl())).into(viewHolder.codeItemImgView);
 
