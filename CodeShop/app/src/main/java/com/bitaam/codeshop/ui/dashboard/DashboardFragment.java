@@ -19,6 +19,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bitaam.codeshop.CreateNewTemplateActivity;
 import com.bitaam.codeshop.LoginActivity;
 import com.bitaam.codeshop.R;
 import com.bitaam.codeshop.adapters.HomeCodeAdapter;
@@ -61,10 +62,25 @@ public class DashboardFragment extends Fragment {
             addTemplateActionBtn.setVisibility(View.VISIBLE);
             publicAddressesLoggedInUser = "asd1234";
             setDataToRecyler();
-            Toast.makeText(getContext(), "LoggedIn with token"+sharedPreferences.getString("LoginToken","No Response"), Toast.LENGTH_LONG).show();
+            //Toast.makeText(getContext(), "LoggedIn with token"+sharedPreferences.getString("LoginToken","No Response"), Toast.LENGTH_LONG).show();
         }
 
         return root;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (sharedPreferences.getString("LoginToken","No Response").equals("No Response")){
+            loginDashBtn.setVisibility(View.VISIBLE);
+            addTemplateActionBtn.setVisibility(View.GONE);
+        }else{
+            loginDashBtn.setVisibility(View.GONE);
+            addTemplateActionBtn.setVisibility(View.VISIBLE);
+            publicAddressesLoggedInUser = "asd1234";
+            setDataToRecyler();
+            //Toast.makeText(getContext(), "LoggedIn with token"+sharedPreferences.getString("LoginToken","No Response"), Toast.LENGTH_LONG).show();
+        }
     }
 
     private void onClickActivities() {
@@ -73,6 +89,13 @@ public class DashboardFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getContext(), LoginActivity.class));
+            }
+        });
+
+        addTemplateActionBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), CreateNewTemplateActivity.class));
             }
         });
 
