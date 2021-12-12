@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class CodeItemModal implements Serializable {
 
-    String imgUrl,titleText,author,date;
+    String imgUrl,titleText,author,date,code;
 
     public CodeItemModal() {
     }
@@ -39,5 +39,13 @@ public class CodeItemModal implements Serializable {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 }

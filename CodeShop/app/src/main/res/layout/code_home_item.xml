@@ -28,13 +28,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/codeItemImageView"
-            android:layout_margin="7dp"
-            android:text="This code provides you very pleasant sign in ui and saves your time."
-            android:textSize="20sp"
-            android:typeface="sans"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="7dp"
             android:ellipsize="end"
             android:maxLines="3"
-            android:textStyle="bold" />
+            android:text="This code provides you very pleasant sign in ui and saves your time."
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
 
 
         <TextView
