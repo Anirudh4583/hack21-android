@@ -53,6 +53,7 @@
             android:layout_toLeftOf="@id/codeAuthorTv"
             android:singleLine="true"
             android:text="Tradable"
+            android:textStyle="bold"
             android:textColor="@color/purple_700"
             android:textSize="14sp" />
 

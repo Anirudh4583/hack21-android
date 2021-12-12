@@ -83,6 +83,18 @@ public class HomeFragment extends Fragment {
         codeType.add("Tradable");
         codeType.add("Open Source");
 
+        ArrayList<String> publicAddresses = new ArrayList<>();
+        publicAddresses.add("asd1234");
+        publicAddresses.add("asd1234");
+        publicAddresses.add("asd1234");
+        publicAddresses.add("asd1234");
+        publicAddresses.add("Open Source");
+        publicAddresses.add("Tradable");
+        publicAddresses.add("Open Source");
+        publicAddresses.add("Tradable");
+        publicAddresses.add("Tradable");
+        publicAddresses.add("Open Source");
+
         String code = "import React, { Component } from \"react\";\n" +
                 "\n" +
                 "export default class Login extends Component {\n" +
@@ -126,6 +138,7 @@ public class HomeFragment extends Fragment {
             codeItemModal.setDate("12 ,Dec 2021 12:00");
             codeItemModal.setCode(code);
             codeItemModal.setType(codeType.get(i));
+            codeItemModal.setPublicAddress(publicAddresses.get(i));
 
             ((HomeCodeAdapter) Objects.requireNonNull(codeHomeRecyclerView.getAdapter())).update(codeItemModal, "author");
 

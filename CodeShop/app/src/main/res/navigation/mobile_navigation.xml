@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.bitaam.codeshop.ui.home.HomeFragment"
-        android:label="Code Templates"
+        android:label="Template Marketplace"
         tools:layout="@layout/fragment_home" />
 
     <fragment
